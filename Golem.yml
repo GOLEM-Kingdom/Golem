@@ -4,7 +4,7 @@
   gather_facts: no
 
   tasks:
-   - name: dat ip cho loopback
+   - name: datipcholoopback
      ios_13_interface:
       name: loopback {{ item.number }}
       ipv4: 10.0.{{ item.number }}.1/24
@@ -12,7 +12,7 @@
        - { number: 1 }
        - { number: 2 }
        - { number: 3 }
-   - name: show ip
+   - name: showip
      ios_command:
        commands:
          - show ip int brief
