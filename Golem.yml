@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: no
 
-  task:
+  tasks:
    - name: dat ip cho loopback
      ios_13_interface:
       name: loopback {{ item.number }}
