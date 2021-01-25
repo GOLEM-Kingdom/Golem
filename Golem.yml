@@ -12,3 +12,10 @@
        - { name: loopback1, ipv4: "10.0.2.1/24" }
        - { name: loopback2, ipv4: "10.0.2.2/24" }
        - { name: loopback3, ipv4: "10.0.2.3/24" }
+   - name: show ip
+     ios_command:
+       commands:
+         - show ip int brief
+     register: show_ip
+     
+   - debug: var=show_ip.stdout_lines
