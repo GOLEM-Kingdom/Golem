@@ -6,12 +6,12 @@
   task:
    - name: dat ip cho loopback
      ios_13_interface:
-      name: "{{ item.name }}"
-      ipv4: "10.0.0.{{ item.ipv4 }}/24"
+      name: loopback {{item.number}}
+      ipv4: 10.0.0.{{ item.ipv4 }}/24
      with_items:
-       - { name: loopback1, ipv4: 1 }
-       - { name: loopback2, ipv4: 2 }
-       - { name: loopback3, ipv4: 3 }
+       - { number: 1 }
+       - { number: 2 }
+       - { number: 3 }
    - name: show ip
      ios_command:
        commands:
