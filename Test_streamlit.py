@@ -1,3 +1,4 @@
+!pip3 install googlemaps
 
 import streamlit as st
 import urllib.parse
