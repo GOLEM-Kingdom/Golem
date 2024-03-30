@@ -1,3 +1,5 @@
+pip install -r 'root/requirements.txt'
+
 import streamlit as st
 import urllib.parse
 import requests
